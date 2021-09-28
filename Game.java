@@ -118,7 +118,8 @@ public class Game {
                 guesses[0] = ' ';
             }
         }
-        Thread.currentThread().interrupt();
+        P1out.println("ENDGAME");
+        P2out.println("ENDGAME");
     }
 
     public String display(char[] guesses){

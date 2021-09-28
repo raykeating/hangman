@@ -38,6 +38,8 @@ public class Client {
                     input = scanner.nextLine();
                     out.println(input);
                     out.flush();
+                } else if (line.trim().equals("ENDGAME")) {
+                    System.exit(0);
                 } else {
                     System.out.println(line);
                 }
