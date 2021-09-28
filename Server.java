@@ -1,5 +1,3 @@
-package com.company;
-
 import java.io.*;
 import java.net.*;
 
@@ -7,7 +5,7 @@ public class Server {
     public static void main(String[] args) throws IOException {
         // if (args.length < 1) { System.out.println( "Expected port number"); return; }
         // int port = Integer.parseInt(args[0]);
-        int port = 4000;
+        int port = 4001;
         try {
             ServerSocket serverSocket = new ServerSocket(port);
             while (true) {
@@ -47,5 +45,3 @@ class ClientHandler implements Runnable {
         game.run();
     }
 }
-
-

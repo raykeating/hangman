@@ -10,7 +10,7 @@ public class Client {
     public static void main(String[] args) throws IOException {
 	// write your code here
         String host = "127.0.0.1";
-        int port = 4000;
+        int port = 4001;
         try (Socket socket = new Socket(host, port)) {
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -27,6 +27,17 @@ public class Client {
                     out.println(input);
                     out.flush();
                     System.out.println("Got it.  Your secret phrase is: " + input);
+                    System.out.println("Waiting for your opponent to guess.");
+                } else if (line.trim().equals("GUESS")) {
+                    System.out.print("Guess a letter: ");
+                    input = scanner.nextLine();
+                    out.println(input);
+                    out.flush();
+                } else if (line.trim().equals("GUESSAGAIN")) {
+                    System.out.print("You already guessed that letter. Guess again: ");
+                    input = scanner.nextLine();
+                    out.println(input);
+                    out.flush();
                 } else {
                     System.out.println(line);
                 }
