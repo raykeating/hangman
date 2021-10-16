@@ -1,7 +1,5 @@
 *all commands are case sensitive*
 
-To get started, cd into the Hangman directory in the assignment folder
-
 To compile: enter these two commands
 "javac Client.java"
 "javac Server.java"
